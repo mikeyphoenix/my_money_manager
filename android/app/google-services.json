@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "615410950544",
+    "firebase_url": "https://za-co-my-money-manager.firebaseio.com",
+    "project_id": "za-co-my-money-manager",
+    "storage_bucket": "za-co-my-money-manager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:615410950544:android:1c7ab1d0b8ca53f2",
+        "android_client_info": {
+          "package_name": "com.my_money_manager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "615410950544-t9ekhmmoqmti8opuo8628cdnqttvbcc6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0KC9db3VbohBPyiBpjAWR_KOTDleXVP4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "615410950544-t9ekhmmoqmti8opuo8628cdnqttvbcc6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:my_money_manager/page/homepage/homepage.dart';
+import 'package:my_money_manager/page/login/facebooklogin.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,7 +21,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+//      home: MyHomePage(title: 'Flutter Demo Home Page'),
+//      home: LoginPage(),
+      home: FacebookLoginPage(),
     );
   }
 }

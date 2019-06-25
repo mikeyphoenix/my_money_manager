@@ -1,3 +1,7 @@
+// Copyright 2017 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
+
 import 'dart:async';
 import 'dart:convert' show json;
 
@@ -12,14 +16,21 @@ GoogleSignIn _googleSignIn = GoogleSignIn(
   ],
 );
 
-
-
-class LoginPage extends StatefulWidget {
-  @override
-  State createState() => LoginPageState();
+void main() {
+  runApp(
+    MaterialApp(
+      title: 'Google Sign In',
+      home: SignInDemo(),
+    ),
+  );
 }
 
-class LoginPageState extends State<LoginPage> {
+class SignInDemo extends StatefulWidget {
+  @override
+  State createState() => SignInDemoState();
+}
+
+class SignInDemoState extends State<SignInDemo> {
   GoogleSignInAccount _currentUser;
   String _contactText;
 
@@ -145,4 +156,3 @@ class LoginPageState extends State<LoginPage> {
         ));
   }
 }
-

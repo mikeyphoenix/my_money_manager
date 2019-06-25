@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Money Manager</string>
+    <string name="facebook_app_id">338581176813201</string>
+    <string name="fb_login_protocol_scheme">fb338581176813201</string>
+</resources>

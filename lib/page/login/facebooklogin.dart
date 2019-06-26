@@ -1,6 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_login/flutter_facebook_login.dart';
+import 'package:my_money_manager/page/homepage/homepage.dart';
+/*import 'package:firebase_auth/src/auth_provider/facebook_auth_provider.dart';*/
 
 
 class FacebookLoginPage extends StatefulWidget {
@@ -13,6 +15,7 @@ class FacebookLoginPage extends StatefulWidget {
 class FacebookLoginPageState extends State<FacebookLoginPage> {
 
   FacebookLogin _facebookLogin = FacebookLogin();
+  FirebaseAuth _auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -33,11 +36,10 @@ class FacebookLoginPageState extends State<FacebookLoginPage> {
                   _facebookLogin.logInWithReadPermissions(['email', 'public_profile']).then((result) {
                     switch(result.status) {
                       case FacebookLoginStatus.loggedIn:
-                        FirebaseAuth.instance.signInWithCustomToken(
-                            token: result.accessToken.token
-                        ).then((signedInUser) {
-                          print('Signed in as ${signedInUser.displayName}');
-                        }).catchError((error){
+                        AuthCredential authCredentials = FacebookAuthProvider.getCredential( accessToken: result.accessToken.token);
+                        _auth.signInWithCredential(authCredentials).then((signedInUser){
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage(title: "Logged in ${signedInUser.displayName}",)));
+                        }).catchError((error) {
                           print(error);
                         });
                     }

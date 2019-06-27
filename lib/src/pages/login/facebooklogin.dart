@@ -1,8 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_login/flutter_facebook_login.dart';
-import 'package:my_money_manager/page/homepage/homepage.dart';
-/*import 'package:firebase_auth/src/auth_provider/facebook_auth_provider.dart';*/
+import 'package:my_money_manager/src/pages/homepage/homepage.dart';
 
 
 class FacebookLoginPage extends StatefulWidget {
